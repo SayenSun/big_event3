@@ -15,14 +15,14 @@ $(function() {
         e.preventDefault();
         $.ajax({
             method: "POST",
-            url: "http://api-breakingnews-web.itheima.net/api/login",
+            url: "/api/login",
             data: $(this).serialize(),
             success: function(res) {
                 if (res.status !== 0) {
                     return layer.msg("获取登录信息失败!");
                 }
                 layer.msg("获取登录信息成功!");
-                location.href = "../../index.html";
+                location.href = "/index.html";
             },
         });
     });
@@ -55,7 +55,7 @@ $(function() {
         e.preventDefault();
         $.ajax({
             method: "POST",
-            url: "http://api-breakingnews-web.itheima.net/api/reguser",
+            url: "/api/reguser",
             data: $(this).serialize(),
             success: function(res) {
                 if (res.status !== 0) {
