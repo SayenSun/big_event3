@@ -22,6 +22,7 @@ $(function() {
                     return layer.msg("获取登录信息失败!");
                 }
                 layer.msg("获取登录信息成功!");
+                localStorage.setItem("token", res.token);
                 location.href = "/index.html";
             },
         });
